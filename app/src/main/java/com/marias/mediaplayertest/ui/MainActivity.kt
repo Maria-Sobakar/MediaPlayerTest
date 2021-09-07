@@ -1,22 +1,23 @@
-package com.marias.mediaplayertest
+package com.marias.mediaplayertest.ui
 
-import android.content.Context
 import android.os.Bundle
-import android.util.AttributeSet
-import android.view.View
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
+import com.marias.mediaplayertest.R
+import com.marias.mediaplayertest.data.Composition
+import com.marias.mediaplayertest.ui.viewmodel.MusicViewModel
 
-class MainActivity : AppCompatActivity(){
-private val viewModel by viewModels<MusicViewModel>()
+class MainActivity : AppCompatActivity() {
+    private val viewModel by viewModels<MusicViewModel>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        addCompositions()
+        if (viewModel.musicList.isEmpty()) {
+            addCompositions()
+        }
     }
-
 
     private fun addCompositions() {
         val composition1 = Composition(

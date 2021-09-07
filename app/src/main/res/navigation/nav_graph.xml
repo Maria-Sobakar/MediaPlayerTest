@@ -5,17 +5,20 @@
 
     <fragment
         android:id="@+id/singleElementFragment"
-        android:name="com.marias.mediaplayertest.SingleElementFragment"
+        android:name="com.marias.mediaplayertest.ui.singleelement.SingleElementFragment"
         android:label="SingleElementFragment" >
         <action
             android:id="@+id/action_singleElementFragment_to_listFragment"
             app:destination="@id/listFragment"
             app:enterAnim="@android:anim/slide_in_left"
             app:exitAnim="@android:anim/slide_out_right" />
+        <action
+            android:id="@+id/action_singleElementFragment_to_listFragment2"
+            app:destination="@id/listFragment" />
     </fragment>
     <fragment
         android:id="@+id/listFragment"
-        android:name="com.marias.mediaplayertest.ListFragment"
+        android:name="com.marias.mediaplayertest.ui.listitems.ListFragment"
         android:label="ListFragment" >
         <action
             android:id="@+id/action_listFragment_to_singleElementFragment"

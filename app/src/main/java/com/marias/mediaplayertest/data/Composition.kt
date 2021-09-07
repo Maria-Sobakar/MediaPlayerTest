@@ -1,4 +1,4 @@
-package com.marias.mediaplayertest
+package com.marias.mediaplayertest.data
 
 import android.graphics.drawable.Drawable
 
